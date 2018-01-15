@@ -8,6 +8,7 @@ then
     if [ 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim' ] 
     then
         bash -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        echo "Installing .vimrc..."
         curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/.vimrc -o ~/.vimrc
         if [ $? == 0 ]
         then
@@ -33,6 +34,7 @@ then
     else
         echo "Vundle is already installed"
         bash -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        echo "Installing .vimrc..."
         curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/.vimrc -o ~/.vimrc
         if [ $? == 0 ]
         then
