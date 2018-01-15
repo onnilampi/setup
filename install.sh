@@ -2,7 +2,6 @@
 
 echo "This is an automated script designed to install necessary configuration files as they are used by Onni Lampi."
 echo "See https://github.com/onnilampi/setup for more details"
-read -n1 -rsp $'Continue by pressing any key.\nExit with CTRL+C\n'
 
 if [[ $EUID -ne 0 ]]
 then
