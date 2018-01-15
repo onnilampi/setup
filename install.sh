@@ -13,8 +13,13 @@ then
         then
             echo ".vimrc installed!"
         fi
+        echo "Installing vim plugins..."
         vim +PluginInstall +qall
-        echo "Installing .zshrc and custom zsh theme"
+        if [ $? == 0 ]
+        then
+            echo "Vim plugins installed!"
+        fi
+        echo "Installing .zshrc and custom zsh theme..."
         curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/.zshrc -o ~/.zshrc
         if [ $? == 0 ]
         then
@@ -33,7 +38,12 @@ then
         then
             echo ".vimrc installed!"
         fi
+        echo "Installing vim plugins..."
         vim +PluginInstall +qall
+        if [ $? == 0 ]
+        then
+            echo "Vim plugins installed!"
+        fi
         echo "Installing .zshrc and custom zsh theme"
         curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/.zshrc -o ~/.zshrc
         if [ $? == 0 ]
