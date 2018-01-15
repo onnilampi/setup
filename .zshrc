@@ -134,11 +134,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gitlog="git log --pretty --graph --oneline --decorate"
-alias publish_site="jekyll build;rsync -avp _site onni@onnilampi.fi:/home/onni/sivut-jekyll"
-alias sound_sinks="pactl list sinks short"
-alias choose_sound="pacmd set-default-sink"
-alias update_telegram="wget https://telegram.org/dl/desktop/linux -O /tmp/TG.tar.xz;pushd /tmp;pwd;tar -xf TG.tar.xz;mv -v Telegram/Telegram /home/onni/bin/Telegram/;mv -v Telegram/Updater /home/onni/bin/Telegram/;ls -la Telegram;popd
-"
 alias sound_control_on="xfce4-terminal --command 'php -S 0.0.0.0:8000 -t /home/onni/projects/PaWebControl/source'"
 
 #zplug
