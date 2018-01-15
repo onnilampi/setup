@@ -4,4 +4,4 @@ Repository can be found in https://github.com/onnilampi/setup
 
 ## Usage
 
-`curl setup.onnilampi.fi | sh`
+`sh -c "$(curl -fsSL setup.onnilampi.fi)`

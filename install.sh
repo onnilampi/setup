@@ -2,13 +2,15 @@
 
 if [[ $EUID -ne 0 ]]
 then
-    if [git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim]
+    if [ 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim' ] 
     then
-        curl https://onnilampi.fi/static/vimrc >> ~/.vimrc
+        sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        curl -fsSL onnilampi.fi/static/vimrc >> ~/.vimrc
         vim +PluginInstall +qall
     else
         echo "Vundle is already installed"
-        curl https://onnilampi.fi/static/vimrc >> ~/.vimrc
+        sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        curl -fsSL onnilampi.fi/static/vimrc >> ~/.vimrc
         vim +PluginInstall +qall
     fi
 
