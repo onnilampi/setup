@@ -44,7 +44,7 @@ then
         echo "${GREEN}.vimrc installed!${NORMAL}"
     else
         echo "${RED}Something happened. Check permissions!${NORMAL}"
-
+        exit 1
     fi
     echo "${BOLD}Installing vim plugins...${NORMAL}"
     vim +PluginInstall +qall
@@ -53,6 +53,7 @@ then
         echo "${GREEN}Vim plugins installed!${NORMAL}"
     else
         echo "${RED}Something happened. Check permissions!${NORMAL}"
+        exit 1
     fi
     echo "${BOLD}Installing .zshrc and custom zsh theme...${NORMAL}"
     curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/.zshrc -o ~/.zshrc
@@ -61,6 +62,7 @@ then
         echo "${GREEN}.zshrc installed!${NORMAL}"
     else
         echo "${RED}Something happened. Check permissions!${NORMAL}"
+        exit 1
     fi
     curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/omnez.zsh-theme -o ~/.oh-my-zsh/themes/omnez.zsh-theme
     if [ $? == 0 ]
@@ -68,6 +70,7 @@ then
         echo "${GREEN}Custom zsh theme installed!${NORMAL}"
     else
         echo "${RED}Something happened. Check permissions!${NORMAL}"
+        exit 1
     fi
 else
     echo "Running as root, now installing git, vim and zsh"
