@@ -13,14 +13,14 @@ if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
     RED="$(tput setaf 1)"
     GREEN="$(tput setaf 2)"
     YELLOW="$(tput setaf 3)"
-    BOLD="$(tput setaf 4)"
+    BLUE="$(tput setaf 4)"
     BOLD="$(tput bold)"
     NORMAL="$(tput sgr0)"
 else
     RED=""
     GREEN=""
     YELLOW=""
-    BOLD=""
+    BLUE=""
     BOLD=""
     NORMAL=""
 fi
