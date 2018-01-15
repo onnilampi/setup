@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]
 then
     bash -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     echo "Installing Vundle..."
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 2> /dev/null
     if [ $? == 0 ]
     then
         echo "Installed Vundle"
