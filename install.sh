@@ -65,8 +65,7 @@ then
         exit 1
     fi
     echo "${BOLD}Checking whether a .custrc exists in the installation...${NORMAL}"
-    source ~/.custrc 2> /dev/null
-    if [ $? == 0 ]
+    if [ -f ~/.custrc ]
     then
         echo "${YELLOW}.custrc exists, won't touch it${NORMAL}"
     else
