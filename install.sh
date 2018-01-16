@@ -64,14 +64,6 @@ then
         echo "${RED}Something happened. Check permissions!${NORMAL}"
         exit 1
     fi
-    echo "${BOLD}Checking whether a .custrc exists in the installation...${NORMAL}"
-    if [ -e ~/.custrc ]
-    then
-        echo "${YELLOW}.custrc exists, won't touch it${NORMAL}"
-    else
-        echo "${GREEN}Creating a dummy .custrc${NORMAL}"
-        echo "#This is a dummy file created by setup.onnilampi.fi" > ~/.custrc
-    fi
     curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/omnez.zsh-theme -o ~/.oh-my-zsh/themes/omnez.zsh-theme
     if [ $? == 0 ]
     then
@@ -79,6 +71,14 @@ then
     else
         echo "${RED}Something happened. Check permissions!${NORMAL}"
         exit 1
+    fi
+    echo "${BOLD}Checking whether a .custrc exists in the installation...${NORMAL}"
+    if [ -e ~/.custrc ]
+    then
+        echo "${YELLOW}.custrc exists, won't touch it${NORMAL}"
+    else
+        echo "${GREEN}Creating a dummy .custrc${NORMAL}"
+        echo "#This is a dummy file created by setup.onnilampi.fi" > ~/.custrc
     fi
 else
     echo "Running as root, now installing git, vim and zsh"
