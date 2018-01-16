@@ -64,6 +64,15 @@ then
         echo "${RED}Something happened. Check permissions!${NORMAL}"
         exit 1
     fi
+    echo "${BOLD}Checking whether a .custrc exists in the installation...${NORMAL}"
+    source ~/.custrc 2> /dev/null
+    if [ $? == 0 ]
+    then
+        echo "${YELLOW}.custrc exists, won't touch it${NORMAL}"
+    else
+        echo "${GREEN}Creating a dummy .custrc${NORMAL}"
+        exit 1
+    fi
     curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/omnez.zsh-theme -o ~/.oh-my-zsh/themes/omnez.zsh-theme
     if [ $? == 0 ]
     then
