@@ -71,7 +71,7 @@ then
         echo "${YELLOW}.custrc exists, won't touch it${NORMAL}"
     else
         echo "${GREEN}Creating a dummy .custrc${NORMAL}"
-        touch ~/.custrc
+        echo "#This is a dummy file created by setup.onnilampi.fi" >> ~/.custrc
     fi
     curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/omnez.zsh-theme -o ~/.oh-my-zsh/themes/omnez.zsh-theme
     if [ $? == 0 ]
