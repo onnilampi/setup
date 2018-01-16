@@ -72,7 +72,6 @@ then
     else
         echo "${GREEN}Creating a dummy .custrc${NORMAL}"
         touch ~/.custrc
-        exit 1
     fi
     curl -fsSL raw.githubusercontent.com/onnilampi/setup/master/omnez.zsh-theme -o ~/.oh-my-zsh/themes/omnez.zsh-theme
     if [ $? == 0 ]
