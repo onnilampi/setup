@@ -78,7 +78,8 @@ then
         echo "${YELLOW}.custrc exists, won't touch it${NORMAL}"
     else
         echo "${GREEN}Creating a dummy .custrc${NORMAL}"
-        echo "#This is a dummy file created by setup.onnilampi.fi" > ~/.custrc
+        CREATED_ON="${date}"
+        echo "#This is a dummy file created by setup.onnilampi.fi on `date` " > ~/.custrc
     fi
 else
     echo "Running as root, now installing git, vim and zsh"
