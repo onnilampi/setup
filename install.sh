@@ -28,7 +28,7 @@ fi
 
 if [[ $EUID -ne 0 ]]
 then
-    bash -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    bash -c "$(curl -fsSL https://raw.github.com/onnilampi/setup/master/zsh-install.sh)"
     echo "${BOLD}Installing Vundle...${NORMAL}"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 2> /dev/null
     if [ $? == 0 ]
